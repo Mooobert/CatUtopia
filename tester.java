@@ -6,7 +6,7 @@ public class tester {
         sa.populateStations(3,4,5,4,3,2);        
         System.out.println(sa.toString());
 
-        structureInsertion si = new structureInsertion();
+        levelGeneration si = new levelGeneration();
         si.insertRows(4);
         System.out.println(si.toString());
     }
