@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class StructureAddition {
 
-    public static ArrayList<ArrayList<Integer>> populateStations(int a, int b, int c, int d, int e, int f){
+    public static ArrayList<ArrayList<Integer>> populateStations(int a, int b, int c, int d, int e, int f) {
         ArrayList<Integer> cookStations = new ArrayList<>(a);
         ArrayList<Integer> foodPrepStations = new ArrayList<>(b);
         ArrayList<Integer> restStations = new ArrayList<>(c);
@@ -10,22 +10,22 @@ public class StructureAddition {
         ArrayList<Integer> specialStations = new ArrayList<>(e);
         ArrayList<Integer> emptySpots = new ArrayList<>(f);
 
-        for(int i = 0; i < a; i++){
+        for (int i = 0; i < a; i++) {
             cookStations.add(100);
         }
-        for(int i = 0; i < b; i++){
+        for (int i = 0; i < b; i++) {
             foodPrepStations.add(200);
         }
-        for(int i = 0; i < c; i++){
+        for (int i = 0; i < c; i++) {
             restStations.add(300);
         }
-        for(int i = 0; i < d; i++){
+        for (int i = 0; i < d; i++) {
             functionStations.add(400);
         }
-        for(int i = 0; i < e; i++){
+        for (int i = 0; i < e; i++) {
             specialStations.add(500);
         }
-        for(int i = 0; i < f; i++){
+        for (int i = 0; i < f; i++) {
             emptySpots.add(-1);
         }
 

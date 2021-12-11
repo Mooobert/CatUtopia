@@ -1,10 +1,9 @@
 public class LevelGeneration {
     private static int[][] generatedUtopia;
 
-    public static int[][] insertRows(int level) {
+    public static int[][] insertRows(int level) throws GenerationException {
         if (level < 0) {
-            System.out.println("invalid level!\n");
-            return generatedUtopia;
+            throw new GenerationException(1);
         }
         switch (level) {
             case 0:
@@ -52,8 +51,7 @@ public class LevelGeneration {
                 }
                 break;
             default:
-                System.out.println("unable to calculate level dimensions!\n");
-                break;
+                throw new GenerationException(1);
         }
         return generatedUtopia;
     }
