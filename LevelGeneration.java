@@ -55,17 +55,4 @@ public class LevelGeneration {
         }
         return generatedUtopia;
     }
-
-    @Override
-    public String toString() {
-        String finalStr = "";
-        for (int i = 0; i < generatedUtopia.length; i++) {
-            finalStr += "[ ";
-            for (int j = 0; j < generatedUtopia[i].length; j++) {
-                finalStr += generatedUtopia[i][j] + " ";
-            }
-            finalStr += "]\n";
-        }
-        return finalStr;
-    }
 }

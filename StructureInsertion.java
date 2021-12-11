@@ -7,8 +7,6 @@ public class StructureInsertion {
     private ArrayList<ArrayList<Integer>> stationList;
     private Random r = new Random();
 
-    public StructureInsertion() {}
-
     public StructureInsertion(int[][] utopiaLayout, ArrayList<ArrayList<Integer>> stationList) {
         this.utopiaLayout = utopiaLayout;
         this.stationList = stationList;
@@ -24,9 +22,9 @@ public class StructureInsertion {
 
         for (int i = 0; i < utopiaLayout.length; i++) {
             for (int j = 0; j < utopiaLayout[i].length; j++) {
-                int category = r.nextInt(6);
+                int category = r.nextInt(17);
                 while (stationList.get(category).isEmpty()) {
-                    category = r.nextInt(6);
+                    category = r.nextInt(17);
                 }
                 utopiaLayout[i][j] = stationList.get(category).remove(0);
             }
