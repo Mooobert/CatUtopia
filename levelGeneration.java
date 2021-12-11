@@ -1,9 +1,9 @@
-public class levelGeneration {
-    private int[][] generatedUtopia;
+public class LevelGeneration {
+    private static int[][] generatedUtopia;
 
-    public int[][] insertRows(int level) {
+    public static int[][] insertRows(int level) {
         if (level < 0) {
-            System.out.println("invalid level!");
+            System.out.println("invalid level!\n");
             return generatedUtopia;
         }
         switch (level) {
@@ -52,12 +52,13 @@ public class levelGeneration {
                 }
                 break;
             default:
-                System.out.println("unable to calculate level dimensions!");
+                System.out.println("unable to calculate level dimensions!\n");
                 break;
         }
         return generatedUtopia;
     }
 
+    @Override
     public String toString() {
         String finalStr = "";
         for (int i = 0; i < generatedUtopia.length; i++) {
