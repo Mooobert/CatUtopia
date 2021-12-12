@@ -3,16 +3,16 @@ import java.util.Random;
 
 public class StructureInsertion {
 
-    private int[][] utopiaLayout;
-    private ArrayList<ArrayList<Integer>> stationList;
+    private String[][] utopiaLayout;
+    private ArrayList<ArrayList<String>> stationList;
     private Random r = new Random();
 
-    public StructureInsertion(int[][] utopiaLayout, ArrayList<ArrayList<Integer>> stationList) {
+    public StructureInsertion(String[][] utopiaLayout, ArrayList<ArrayList<String>> stationList) {
         this.utopiaLayout = utopiaLayout;
         this.stationList = stationList;
     }
 
-    public int[][] insert() throws GenerationException {
+    public String[][] insert() throws GenerationException {
         int levelSpots = numLevelSpots(utopiaLayout);
         int stationSpots = numStationSpots(stationList);
 
@@ -32,7 +32,7 @@ public class StructureInsertion {
         return utopiaLayout;
     }
 
-    private int numLevelSpots(int[][] station2dArr) {
+    private int numLevelSpots(String[][] station2dArr) {
         int numLevelSpots = 0;
         for (int i = 0; i < station2dArr.length; i++) {
             for (int j = 0; j < station2dArr[i].length; j++) {
@@ -42,7 +42,7 @@ public class StructureInsertion {
         return numLevelSpots;
     }
 
-    private int numStationSpots(ArrayList<ArrayList<Integer>> station2dArrList) {
+    private int numStationSpots(ArrayList<ArrayList<String>> station2dArrList) {
         int numStationSpots = 0;
         for (int i = 0; i < station2dArrList.size(); i++) {
             for (int j = 0; j < station2dArrList.get(i).size(); j++) {

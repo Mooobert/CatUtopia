@@ -2,79 +2,79 @@ import java.util.ArrayList;
 
 public class StructureAddition {
 
-    public static ArrayList<ArrayList<Integer>> populateStations(int a, int b1, int b2, int b3, int b4, int b5, int b6,
+    public static ArrayList<ArrayList<String>> populateStations(int a, int b1, int b2, int b3, int b4, int b5, int b6,
             int b7, int b8, int b9, int b10, int b11, int b12, int c, int d, int e, int f) {
-        ArrayList<Integer> cookStations = new ArrayList<>(a);
-        ArrayList<Integer> carrotStations = new ArrayList<>(b1);
-        ArrayList<Integer> cabbageStations = new ArrayList<>(b2);
-        ArrayList<Integer> cornStations = new ArrayList<>(b3);
-        ArrayList<Integer> acornStations = new ArrayList<>(b4);
-        ArrayList<Integer> broccoliStations = new ArrayList<>(b5);
-        ArrayList<Integer> lemonStations = new ArrayList<>(b6);
-        ArrayList<Integer> honeyStations = new ArrayList<>(b7);
-        ArrayList<Integer> wheatStations = new ArrayList<>(b8);
-        ArrayList<Integer> radishStations = new ArrayList<>(b9);
-        ArrayList<Integer> pumpkinStations = new ArrayList<>(b10);
-        ArrayList<Integer> mushroomStations = new ArrayList<>(b11);
-        ArrayList<Integer> celeryStations = new ArrayList<>(b12);
-        ArrayList<Integer> restStations = new ArrayList<>(c);
-        ArrayList<Integer> functionStations = new ArrayList<>(d);
-        ArrayList<Integer> specialStations = new ArrayList<>(e);
-        ArrayList<Integer> emptySpots = new ArrayList<>(f);
+        ArrayList<String> cookStations = new ArrayList<>(a);
+        ArrayList<String> carrotStations = new ArrayList<>(b1);
+        ArrayList<String> cabbageStations = new ArrayList<>(b2);
+        ArrayList<String> cornStations = new ArrayList<>(b3);
+        ArrayList<String> acornStations = new ArrayList<>(b4);
+        ArrayList<String> broccoliStations = new ArrayList<>(b5);
+        ArrayList<String> lemonStations = new ArrayList<>(b6);
+        ArrayList<String> honeyStations = new ArrayList<>(b7);
+        ArrayList<String> wheatStations = new ArrayList<>(b8);
+        ArrayList<String> radishStations = new ArrayList<>(b9);
+        ArrayList<String> pumpkinStations = new ArrayList<>(b10);
+        ArrayList<String> mushroomStations = new ArrayList<>(b11);
+        ArrayList<String> celeryStations = new ArrayList<>(b12);
+        ArrayList<String> restStations = new ArrayList<>(c);
+        ArrayList<String> functionStations = new ArrayList<>(d);
+        ArrayList<String> specialStations = new ArrayList<>(e);
+        ArrayList<String> emptySpots = new ArrayList<>(f);
 
         for (int i = 0; i < a; i++) {
-            cookStations.add(100);
+            cookStations.add("cooking");
         }
         for (int i = 0; i < b1; i++) {
-            carrotStations.add(201);
+            carrotStations.add("carrot");
         }
         for (int i = 0; i < b2; i++) {
-            cabbageStations.add(202);
+            cabbageStations.add("cabbage");
         }
         for (int i = 0; i < b3; i++) {
-            cornStations.add(203);
+            cornStations.add("corn");
         }
         for (int i = 0; i < b4; i++) {
-            acornStations.add(204);
+            acornStations.add("acorn");
         }
         for (int i = 0; i < b5; i++) {
-            broccoliStations.add(205);
+            broccoliStations.add("broccoli");
         }
         for (int i = 0; i < b6; i++) {
-            lemonStations.add(206);
+            lemonStations.add("lemon");
         }
         for (int i = 0; i < b7; i++) {
-            honeyStations.add(207);
+            honeyStations.add("honey");
         }
         for (int i = 0; i < b8; i++) {
-            wheatStations.add(208);
+            wheatStations.add("wheat");
         }
         for (int i = 0; i < b9; i++) {
-            radishStations.add(209);
+            radishStations.add("radish");
         }
         for (int i = 0; i < b10; i++) {
-            pumpkinStations.add(210);
+            pumpkinStations.add("pumpkin");
         }
         for (int i = 0; i < b11; i++) {
-            mushroomStations.add(211);
+            mushroomStations.add("mushrooms");
         }
         for (int i = 0; i < b12; i++) {
-            celeryStations.add(212);
+            celeryStations.add("celery");
         }
         for (int i = 0; i < c; i++) {
-            restStations.add(300);
+            restStations.add("rest");
         }
         for (int i = 0; i < d; i++) {
-            functionStations.add(400);
+            functionStations.add("function");
         }
         for (int i = 0; i < e; i++) {
-            specialStations.add(500);
+            specialStations.add("special");
         }
         for (int i = 0; i < f; i++) {
-            emptySpots.add(-1);
+            emptySpots.add("[empty]");
         }
 
-        ArrayList<ArrayList<Integer>> stationList = new ArrayList<>(17);
+        ArrayList<ArrayList<String>> stationList = new ArrayList<>(17);
 
         stationList.add(cookStations);
         stationList.add(emptySpots);

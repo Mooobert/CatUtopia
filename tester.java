@@ -2,7 +2,8 @@ public class tester {
     public static void main(String[] args) throws GenerationException {
         // largest possible level generation
         StructureInsertion si = new StructureInsertion(LevelGeneration.insertRows(4),
-                StructureAddition.populateStations(3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 13, 7, 2, 16));
+                StructureAddition.populateStations(3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 13, 7, 2,
+                        16));
         si.insert();
         System.out.println(si.toString());
 
