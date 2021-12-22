@@ -13,6 +13,7 @@ public class GUI extends JFrame implements ActionListener {
     private JTextField tf1, tf2, tf3, tf4, tf5, tf6, tf7, tf8, tf9, tf10, tf11, tf12, tf13, tf14, tf15, tf16, tf17,
             leveltf;
     private int a, b1, b2, b3, b4, b5, b6, b7, b8, b9, b10, b11, b12, c, d, e, f, level;
+    private JLabel newLevel = new JLabel("");
 
     public void actionPerformed(ActionEvent ae) {
         String text = "";
@@ -182,79 +183,79 @@ public class GUI extends JFrame implements ActionListener {
         e = 0;
         f = 0;
         level = 0;
-        setSize(300, 550);
+        newLevel.setText("");
     }
 
     public void componentSetup() {
-        JLabel l1 = new JLabel("Enter # of cooking stations: ");
+        JLabel l1 = new JLabel("Enter number of cooking stations: ");
         tf1 = new JTextField(3);
         tf1.addActionListener(this);
 
-        JLabel l2 = new JLabel("Enter # of carrot stations: ");
+        JLabel l2 = new JLabel("Enter number of carrot stations: ");
         tf2 = new JTextField(3);
         tf2.addActionListener(this);
 
-        JLabel l3 = new JLabel("Enter # of cabbage stations: ");
+        JLabel l3 = new JLabel("Enter number of cabbage stations: ");
         tf3 = new JTextField(3);
         tf3.addActionListener(this);
 
-        JLabel l4 = new JLabel("Enter # of corn stations: ");
+        JLabel l4 = new JLabel("Enter number of corn stations: ");
         tf4 = new JTextField(3);
         tf4.addActionListener(this);
 
-        JLabel l5 = new JLabel("Enter # of acorn stations: ");
+        JLabel l5 = new JLabel("Enter number of acorn stations: ");
         tf5 = new JTextField(3);
         tf5.addActionListener(this);
 
-        JLabel l6 = new JLabel("Enter # of broccoli stations: ");
+        JLabel l6 = new JLabel("Enter number of broccoli stations: ");
         tf6 = new JTextField(3);
         tf6.addActionListener(this);
 
-        JLabel l7 = new JLabel("Enter # of lemon stations: ");
+        JLabel l7 = new JLabel("Enter number of lemon stations: ");
         tf7 = new JTextField(3);
         tf7.addActionListener(this);
 
-        JLabel l8 = new JLabel("Enter # of honey stations: ");
+        JLabel l8 = new JLabel("Enter number of honey stations: ");
         tf8 = new JTextField(3);
         tf8.addActionListener(this);
 
-        JLabel l9 = new JLabel("Enter # of wheat stations: ");
+        JLabel l9 = new JLabel("Enter number of wheat stations: ");
         tf9 = new JTextField(3);
         tf9.addActionListener(this);
 
-        JLabel l10 = new JLabel("Enter # of radish stations: ");
+        JLabel l10 = new JLabel("Enter number of radish stations: ");
         tf10 = new JTextField(3);
         tf10.addActionListener(this);
 
-        JLabel l11 = new JLabel("Enter # of pumpkin stations: ");
+        JLabel l11 = new JLabel("Enter number of pumpkin stations: ");
         tf11 = new JTextField(3);
         tf11.addActionListener(this);
 
-        JLabel l12 = new JLabel("Enter # of mushroom stations: ");
+        JLabel l12 = new JLabel("Enter number of mushroom stations: ");
         tf12 = new JTextField(3);
         tf12.addActionListener(this);
 
-        JLabel l13 = new JLabel("Enter # of celery stations: ");
+        JLabel l13 = new JLabel("Enter number of celery stations: ");
         tf13 = new JTextField(3);
         tf13.addActionListener(this);
 
-        JLabel l14 = new JLabel("Enter # of rest stations: ");
+        JLabel l14 = new JLabel("Enter number of rest stations: ");
         tf14 = new JTextField(3);
         tf14.addActionListener(this);
 
-        JLabel l15 = new JLabel("Enter # of function stations: ");
+        JLabel l15 = new JLabel("Enter number of function stations: ");
         tf15 = new JTextField(3);
         tf15.addActionListener(this);
 
-        JLabel l16 = new JLabel("Enter # of special stations: ");
+        JLabel l16 = new JLabel("Enter number of special stations: ");
         tf16 = new JTextField(3);
         tf16.addActionListener(this);
 
-        JLabel l17 = new JLabel("Enter # of empty spots: ");
+        JLabel l17 = new JLabel("Enter number of empty spots: ");
         tf17 = new JTextField(3);
         tf17.addActionListener(this);
 
-        JLabel levelNum = new JLabel("Enter upgrade level: ");
+        JLabel levelNum = new JLabel("Enter field upgrade level: ");
         leveltf = new JTextField(3);
         leveltf.addActionListener(this);
 
@@ -263,10 +264,9 @@ public class GUI extends JFrame implements ActionListener {
             public void actionPerformed(ActionEvent ae) {
                 try {
                     StructureInsertion si = new StructureInsertion(LevelGeneration.insertRows(level), StructureAddition
-                            .populateStations(a, b1, b2, b3, b4, b5, b6, b7, b8, b9, b10, b11, b12, c, d, e, f));
+                            .populateAllStations(a, b1, b2, b3, b4, b5, b6, b7, b8, b9, b10, b11, b12, c, d, e, f));
                     si.insert();
                     JOptionPane.showMessageDialog(null, si.toString());
-                    setSize(1000, 550);
                 } catch (Exception e) {
                     JOptionPane.showMessageDialog(null, "Level generation/insertion failed!");
                 }
@@ -316,15 +316,16 @@ public class GUI extends JFrame implements ActionListener {
         cp.add(tf17);
         cp.add(generateInsertions);
         cp.add(resetFields);
+        cp.add(newLevel);
 
         setVisible(true);
     }
 
     public void GUIsetup() {
-        setSize(300, 550);
+        setSize(350, 550);
         setResizable(false);
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
-        setTitle("Cats & Soup station spot randomizer");
+        setTitle("Cats & Soup facility randomizer");
         setVisible(true);
     }
 
